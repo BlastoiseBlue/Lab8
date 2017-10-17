@@ -44,6 +44,6 @@ public class BlogEntry {
 	public void post() {
 		if(month!=0&&day!=0&&year!=0)System.out.print("("+month+"/"+day+"/"+year+") ");
 		if(username!=null)System.out.print(username+": ");else System.out.print("Anonymous: ");
-		if(postText!=null)System.out.println(postText);
+		if(postText!=null)System.out.println(postText);else System.out.println();
 	}
 }
