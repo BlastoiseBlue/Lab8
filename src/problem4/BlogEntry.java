@@ -1,5 +1,7 @@
 package problem4;
 
+import java.util.StringTokenizer;
+
 public class BlogEntry {
 	String username;
 	String postText;
@@ -63,5 +65,19 @@ public class BlogEntry {
 			System.out.println(postText);
 		else
 			System.out.println();
+	}
+
+	public String getSummary() {
+		StringTokenizer outputText = new StringTokenizer(postText, " ,.");
+		// int numWords=outputText.countTokens();
+		int x = 0;
+		String output = null;
+		for (x = 0; x < 10; x++) {
+			if (outputText.hasMoreTokens() && output != null)
+				output = output + outputText.nextToken();
+			else
+				output = outputText.nextToken();
+		}
+		return output;
 	}
 }
