@@ -5,9 +5,6 @@ import java.util.StringTokenizer;
 public class BlogEntry {
 	String username;
 	String postText;
-	// int month;
-	// int day;
-	// int year;
 	Date date = new Date();
 
 	public void setName(String inputName) {
@@ -17,12 +14,6 @@ public class BlogEntry {
 	public void setText(String inputText) {
 		postText = inputText;
 	}
-
-	// public void setDate(int inputMonth, int inputDay, int inputYear) {
-	// month = inputMonth;
-	// day = inputDay;
-	// year = inputYear;
-	// }
 
 	public void clearName() {
 		setName(null);
@@ -56,7 +47,7 @@ public class BlogEntry {
 	}
 
 	public void DisplayEntry() {
-		if (date.month != 0 && date.day != 0 && date.year != 0)
+		if (date.getMonthInt() != 0 && date.getDay() != 0 && date.getYear() != 0)
 			System.out.print("(" + date.outputDate() + ") ");
 		if (username != null)
 			System.out.print(username + ": ");
@@ -82,7 +73,7 @@ public class BlogEntry {
 	}
 
 	public void PrintSummary() {
-		if (date.month != 0 && date.day != 0 && date.year != 0)
+		if (date.getMonthInt() != 0 && date.getDay() != 0 && date.getYear() != 0)
 			System.out.print("(" + date.outputDate() + ") ");
 		if (username != null)
 			System.out.print(username + ": ");

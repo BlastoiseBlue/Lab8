@@ -1,14 +1,26 @@
 package problem4;
 
 public class Date {
-	int month;
-	int day;
-	int year;
+	private int month;
+	private int day;
+	private int year;
 
 	public void setDate(int inputMonth, int inputDay, int inputYear) {
 		month = inputMonth;
 		day = inputDay;
 		year = inputYear;
+	}
+
+	public int getDay() {
+		return day;
+	}
+
+	public int getMonthInt() {
+		return month;
+	}
+
+	public int getYear() {
+		return year;
 	}
 
 	public String outputDate() {
